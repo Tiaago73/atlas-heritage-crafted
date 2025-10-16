@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import atlasLogo from "@/assets/atlas-logo.png";
 
 const navigation = [
   { name: "Sobre", href: "/sobre" },
@@ -22,10 +23,12 @@ export const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center shadow-gold group-hover:shadow-xl transition-all duration-300">
-              <span className="font-cinzel font-bold text-primary text-xl">A</span>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={atlasLogo} 
+              alt="Atlas Patrimonial" 
+              className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+            />
             <span className="font-cinzel font-bold text-xl text-foreground hidden sm:block">
               Atlas Patrimonial
             </span>
