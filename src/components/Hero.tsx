@@ -11,9 +11,9 @@ export const Hero = () => {
         <img
           src={heroImage}
           alt="Skyline urbano premium ao pôr do sol"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/60" />
       </div>
 
       {/* Content */}

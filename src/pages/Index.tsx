@@ -106,13 +106,14 @@ const Index = () => {
       {/* Como Funciona */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Processo"
-            title="Como Funciona"
-            subtitle="Três passos para você começar a construir patrimônio em imóveis com renda passiva e gestão completa."
-            centered
-            className="mb-16"
-          />
+          <div className="text-center mb-16">
+            <SectionHeading
+              badge="Processo"
+              title="Como Funciona"
+              subtitle="Três passos para você começar a construir patrimônio em imóveis com renda passiva e gestão completa."
+              centered
+            />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StepCard
@@ -217,13 +218,14 @@ const Index = () => {
       {/* Processo de Consultoria */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Consultoria"
-            title="Como Trabalhamos com Você"
-            subtitle="Um processo transparente e estruturado para garantir o melhor investimento."
-            centered
-            className="mb-16"
-          />
+          <div className="text-center mb-16">
+            <SectionHeading
+              badge="Consultoria"
+              title="Como Trabalhamos com Você"
+              subtitle="Um processo transparente e estruturado para garantir o melhor investimento."
+              centered
+            />
+          </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
             {[
@@ -269,13 +271,14 @@ const Index = () => {
       {/* Cases/Oportunidades */}
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Oportunidades"
-            title="Estudos de Viabilidade"
-            subtitle="Exemplos de imóveis analisados com potencial de renda positiva. Valores e projeções baseados em estudos reais."
-            centered
-            className="mb-16"
-          />
+          <div className="text-center mb-16">
+            <SectionHeading
+              badge="Oportunidades"
+              title="Estudos de Viabilidade"
+              subtitle="Exemplos de imóveis analisados com potencial de renda positiva. Valores e projeções baseados em estudos reais."
+              centered
+            />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {cases.map((caseItem) => (
@@ -342,13 +345,14 @@ const Index = () => {
       {/* Depoimentos */}
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Depoimentos"
-            title="O Que Nossos Clientes Dizem"
-            subtitle="Histórias reais de quem está construindo patrimônio com a Atlas Patrimonial."
-            centered
-            className="mb-16"
-          />
+          <div className="text-center mb-16">
+            <SectionHeading
+              badge="Depoimentos"
+              title="O Que Nossos Clientes Dizem"
+              subtitle="Histórias reais de quem está construindo patrimônio com a Atlas Patrimonial."
+              centered
+            />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -361,13 +365,14 @@ const Index = () => {
       {/* Na Mídia */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Imprensa"
-            title="Atlas na Mídia"
-            subtitle="Acompanhe nossa presença nos principais veículos de economia e investimentos."
-            centered
-            className="mb-16"
-          />
+          <div className="text-center mb-16">
+            <SectionHeading
+              badge="Imprensa"
+              title="Atlas na Mídia"
+              subtitle="Acompanhe nossa presença nos principais veículos de economia e investimentos."
+              centered
+            />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {mediaItems.map((item, index) => (

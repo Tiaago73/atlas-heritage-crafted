@@ -36,13 +36,32 @@ const Contato = () => {
 
     setLoading(true);
     
-    // Simulação de envio (integrar com webhook/API)
-    setTimeout(() => {
+    try {
+      // Enviar para Google Sheets via Apps Script Web App
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzYOUR_DEPLOYMENT_ID/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          city: formData.city,
+          objective: formData.objective,
+          income: formData.income || 'Não informado',
+          message: formData.message || 'Sem mensagem adicional',
+        }),
+      });
+
       setLoading(false);
       toast({
         title: "Mensagem enviada!",
         description: "Entraremos em contato em até 24 horas úteis.",
       });
+      
       setFormData({
         name: "",
         email: "",
@@ -53,7 +72,14 @@ const Contato = () => {
         message: "",
         acceptTerms: false,
       });
-    }, 2000);
+    } catch (error) {
+      setLoading(false);
+      toast({
+        title: "Erro ao enviar",
+        description: "Por favor, tente novamente ou entre em contato diretamente.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
