@@ -28,7 +28,7 @@ export const Header = () => {
               alt="Atlas Patrimonial" 
               className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
             />
-            <span className="font-cinzel font-bold text-xl text-foreground hidden sm:block">
+            <span className="font-cinzel font-bold text-xl text-white hidden sm:block">
               Atlas Patrimonial
             </span>
           </Link>
@@ -50,7 +50,7 @@ export const Header = () => {
 
           {/* CTAs */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
+            <Button variant="ghost" size="sm" asChild className="text-white hover:text-gold">
               <Link to="/area-cliente">Área do Cliente</Link>
             </Button>
             <Button variant="hero" size="default" asChild>
@@ -84,7 +84,7 @@ export const Header = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 px-4 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" asChild>
+                <Button variant="ghost" size="sm" asChild className="text-white hover:text-gold">
                   <Link to="/area-cliente" onClick={() => setMobileMenuOpen(false)}>
                     Área do Cliente
                   </Link>
