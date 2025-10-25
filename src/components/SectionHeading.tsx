@@ -4,6 +4,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   centered?: boolean;
   className?: string;
+  onPrimary?: boolean;
 }
 
 export const SectionHeading = ({
@@ -12,6 +13,7 @@ export const SectionHeading = ({
   subtitle,
   centered = false,
   className = "",
+  onPrimary = false,
 }: SectionHeadingProps) => {
   return (
     <div className={`space-y-4 ${centered ? "text-center" : ""} ${className}`}>
@@ -22,11 +24,11 @@ export const SectionHeading = ({
           </span>
         </div>
       )}
-      <h2 className="font-cinzel font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground">
+      <h2 className={`font-cinzel font-bold text-3xl sm:text-4xl lg:text-5xl ${onPrimary ? "text-primary-foreground" : "text-foreground"}`}>
         {title}
       </h2>
       {subtitle && (
-        <p className={`text-lg text-muted-foreground max-w-3xl leading-relaxed ${centered ? "mx-auto" : ""}`}>
+        <p className={`text-lg max-w-3xl leading-relaxed ${onPrimary ? "text-primary-foreground/80" : "text-muted-foreground"} ${centered ? "mx-auto" : ""}`}>
           {subtitle}
         </p>
       )}

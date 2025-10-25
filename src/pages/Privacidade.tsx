@@ -14,6 +14,7 @@ const Privacidade = () => {
             title="Política de Privacidade"
             subtitle="Sua privacidade e segurança dos seus dados são prioridade para a Atlas Patrimonial."
             centered
+            onPrimary
           />
         </div>
       </section>

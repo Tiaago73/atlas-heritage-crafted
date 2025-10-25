@@ -14,6 +14,7 @@ const Termos = () => {
             title="Termos de Uso"
             subtitle="Condições gerais de uso dos serviços da Atlas Patrimonial."
             centered
+            onPrimary
           />
         </div>
       </section>
