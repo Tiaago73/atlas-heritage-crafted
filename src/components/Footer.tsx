@@ -133,7 +133,7 @@ export const Footer = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-sm text-primary-foreground/60 hover:text-gold transition-colors"
+                  className="text-sm text-primary-foreground/80 hover:text-gold transition-colors"
                 >
                   {link.name}
                 </Link>
