@@ -116,12 +116,12 @@ const Contato = () => {
                     </div>
                     <div>
                       <div className="font-medium text-foreground mb-1">Telefone</div>
-                      <a href="tel:+551199999999" className="text-muted-foreground hover:text-gold transition-colors">
-                        +55 (11) 9999-9999
+                      <a href="tel:+5513981419279" className="text-muted-foreground hover:text-gold transition-colors">
+                        +55 13 98141-9279
                       </a>
                       <br />
                       <a
-                        href="https://wa.me/5511999999999"
+                        href="https://wa.me/5513981419279"
                         className="text-sm text-gold hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"

@@ -380,11 +380,6 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/midia">Ver Todas as Matérias</Link>
-            </Button>
-          </div>
         </div>
       </section>
 

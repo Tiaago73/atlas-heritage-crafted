@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import atlasLogo from "@/assets/atlas-logo.png";
 
 const footerLinks = {
   navegacao: [
@@ -9,7 +10,6 @@ const footerLinks = {
     { name: "Blog", href: "/blog" },
   ],
   recursos: [
-    { name: "Mídia", href: "/midia" },
     { name: "FAQ", href: "/faq" },
     { name: "Contato", href: "/contato" },
     { name: "Área do Cliente", href: "/area-cliente" },
@@ -21,9 +21,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: "Instagram", href: "https://instagram.com", icon: Instagram },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "YouTube", href: "https://youtube.com", icon: Youtube },
+  { name: "Instagram", href: "https://www.instagram.com/atlas_patrimonial/", icon: Instagram },
 ];
 
 export const Footer = () => {
@@ -34,9 +32,11 @@ export const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center shadow-gold">
-                <span className="font-cinzel font-bold text-primary text-xl">A</span>
-              </div>
+              <img 
+                src={atlasLogo} 
+                alt="Atlas Patrimonial" 
+                className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
+              />
               <span className="font-cinzel font-bold text-xl">Atlas Patrimonial</span>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
@@ -99,11 +99,11 @@ export const Footer = () => {
               <li className="flex items-start gap-2 text-sm text-primary-foreground/80">
                 <Phone size={16} className="mt-1 flex-shrink-0" />
                 <div>
-                  <a href="tel:+551199999999" className="hover:text-gold transition-colors">
-                    +55 (11) 9999-9999
+                  <a href="tel:+5513981419279" className="hover:text-gold transition-colors">
+                    +55 13 98141-9279
                   </a>
                   <br />
-                  <a href="https://wa.me/5511999999999" className="hover:text-gold transition-colors">
+                  <a href="https://wa.me/5513981419279" className="hover:text-gold transition-colors">
                     WhatsApp
                   </a>
                 </div>

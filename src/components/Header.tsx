@@ -9,7 +9,6 @@ const navigation = [
   { name: "Soluções", href: "/solucoes" },
   { name: "Cases", href: "/cases" },
   { name: "Blog", href: "/blog" },
-  { name: "Mídia", href: "/midia" },
   { name: "FAQ", href: "/faq" },
   { name: "Contato", href: "/contato" },
 ];
@@ -19,7 +18,7 @@ export const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-border">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -41,7 +40,7 @@ export const Header = () => {
                 key={item.name}
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-gold ${
-                  location.pathname === item.href ? "text-gold" : "text-foreground"
+                  location.pathname === item.href ? "text-gold" : "text-gray-200"
                 }`}
               >
                 {item.name}
@@ -61,7 +60,7 @@ export const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-foreground hover:text-gold transition-colors"
+            className="lg:hidden p-2 text-gray-200 hover:text-gold transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -77,7 +76,7 @@ export const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={`text-sm font-medium transition-colors hover:text-gold px-4 py-2 ${
-                    location.pathname === item.href ? "text-gold bg-muted rounded-lg" : "text-foreground"
+                    location.pathname === item.href ? "text-gold bg-muted rounded-lg" : "text-gray-200"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >

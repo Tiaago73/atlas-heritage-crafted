@@ -11,6 +11,8 @@ import Blog from "./pages/Blog";
 import Midia from "./pages/Midia";
 import FAQ from "./pages/FAQ";
 import Contato from "./pages/Contato";
+import Privacidade from "./pages/Privacidade";
+import Termos from "./pages/Termos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/midia" element={<Midia />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/privacidade" element={<Privacidade />} />
+          <Route path="/termos" element={<Termos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
