@@ -32,6 +32,7 @@ const Cases = () => {
       tags: ["Studio", "Pronto para morar"],
       city: "sao-paulo",
       type: "residencial",
+      image: "/src/assets/cases/studio-pinheiros-sp.jpg",
     },
     {
       slug: "cobertura-moema-sp",
@@ -43,6 +44,7 @@ const Cases = () => {
       tags: ["3 quartos", "Cobertura"],
       city: "sao-paulo",
       type: "residencial",
+      image: "/src/assets/cases/cobertura-moema-sp.jpg",
     },
     {
       slug: "sala-comercial-faria-lima",
@@ -54,6 +56,7 @@ const Cases = () => {
       tags: ["Comercial", "Laje corporativa"],
       city: "sao-paulo",
       type: "comercial",
+      image: "/src/assets/cases/sala-comercial-faria-lima-sp.jpg",
     },
     {
       slug: "apartamento-leblon-rj",
@@ -65,6 +68,7 @@ const Cases = () => {
       tags: ["3 quartos", "Vista mar"],
       city: "rio-de-janeiro",
       type: "residencial",
+      image: "/src/assets/cases/apartamento-leblon-rj.jpg",
     },
     {
       slug: "apartamento-asa-sul-df",
@@ -76,6 +80,7 @@ const Cases = () => {
       tags: ["2 quartos", "Localização premium"],
       city: "brasilia",
       type: "residencial",
+      image: "/src/assets/cases/apartamento-asa-sul-df.jpg",
     },
   ];
 

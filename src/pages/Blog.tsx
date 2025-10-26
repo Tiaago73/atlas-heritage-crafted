@@ -3,8 +3,61 @@ import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import comoComecarImg from "@/assets/blog/como-comecar-investir-imoveis.png";
+import metodologia2080Img from "@/assets/blog/metodologia-20-80.png";
+import errosImg from "@/assets/blog/erros-investidor-iniciante.png";
+import localizacaoImg from "@/assets/blog/localizacao-vs-preco.png";
+import gestaoImg from "@/assets/blog/gestao-imoveis-terceirizar.png";
+import consorcioImg from "@/assets/blog/consorcio-imovel-guia.png";
 
 const Blog = () => {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      toast({
+        title: "Email inválido",
+        description: "Por favor, insira um email válido.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await fetch('https://script.google.com/macros/s/SEU_DEPLOYMENT_ID/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          email: email,
+        }),
+      });
+
+      setLoading(false);
+      toast({
+        title: "Inscrição confirmada!",
+        description: "Você receberá nossos conteúdos exclusivos em breve.",
+      });
+      setEmail("");
+    } catch (error) {
+      setLoading(false);
+      toast({
+        title: "Erro ao inscrever",
+        description: "Por favor, tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    }
+  };
+
   const posts = [
     {
       slug: "como-comecar-investir-imoveis",
@@ -14,7 +67,7 @@ const Blog = () => {
       category: "Iniciantes",
       date: "15 Mar 2024",
       readTime: "8 min",
-      image: "",
+      image: comoComecarImg,
     },
     {
       slug: "metodologia-20-80-explicada",
@@ -24,7 +77,7 @@ const Blog = () => {
       category: "Estratégia",
       date: "10 Mar 2024",
       readTime: "12 min",
-      image: "",
+      image: metodologia2080Img,
     },
     {
       slug: "erros-comuns-investimento-imobiliario",
@@ -34,7 +87,7 @@ const Blog = () => {
       category: "Dicas",
       date: "05 Mar 2024",
       readTime: "10 min",
-      image: "",
+      image: errosImg,
     },
     {
       slug: "localizacao-ou-preco",
@@ -44,27 +97,27 @@ const Blog = () => {
       category: "Análise",
       date: "28 Fev 2024",
       readTime: "9 min",
-      image: "",
+      image: localizacaoImg,
     },
     {
-      slug: "gestao-imoveis-alugados",
+      slug: "gestao-imoveis-terceirizar",
       title: "Gestão de Imóveis: Vale a Pena Terceirizar?",
       excerpt:
         "Compare os prós e contras de administrar seus próprios imóveis versus contratar gestão profissional especializada.",
       category: "Gestão",
       date: "20 Fev 2024",
       readTime: "7 min",
-      image: "",
+      image: gestaoImg,
     },
     {
-      slug: "mercado-imobiliario-2024",
-      title: "Perspectivas do Mercado Imobiliário em 2024",
+      slug: "consorcio-imovel-guia-completo",
+      title: "Consórcio de Imóvel: Guia Definitivo",
       excerpt:
-        "Análise das tendências, oportunidades e desafios do mercado imobiliário brasileiro para o ano de 2024.",
-      category: "Mercado",
+        "Do zero à contemplação segura: tudo o que você precisa saber sobre consórcio imobiliário e como usar com inteligência.",
+      category: "Estratégia",
       date: "15 Fev 2024",
       readTime: "11 min",
-      image: "",
+      image: consorcioImg,
     },
   ];
 
@@ -94,9 +147,13 @@ const Blog = () => {
               <article key={post.slug} className="group">
                 <Link to={`/post/${post.slug}`}>
                   <div className="bg-card rounded-xl overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300 border border-border h-full flex flex-col">
-                    {/* Image Placeholder */}
-                    <div className="h-48 bg-gradient-to-br from-primary/5 to-gold/10 flex items-center justify-center">
-                      <span className="text-4xl font-cinzel font-bold text-muted-foreground/20">Atlas</span>
+                    {/* Image */}
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
 
                     {/* Content */}
@@ -150,16 +207,20 @@ const Blog = () => {
             <p className="text-muted-foreground text-lg">
               Assine nossa newsletter e receba análises, oportunidades e insights direto no seu e-mail.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Seu melhor e-mail"
                 className="flex-1 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-gold"
+                required
+                disabled={loading}
               />
-              <Button variant="hero" size="lg">
-                Assinar
+              <Button variant="hero" size="lg" type="submit" disabled={loading}>
+                {loading ? "Inscrevendo..." : "Assinar Newsletter"}
               </Button>
-            </div>
+            </form>
             <p className="text-xs text-muted-foreground">
               Sem spam. Cancele quando quiser.
             </p>
