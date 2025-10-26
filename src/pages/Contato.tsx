@@ -24,7 +24,7 @@ const Contato = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.acceptTerms) {
       toast({
         title: "Atenção",
@@ -35,33 +35,36 @@ const Contato = () => {
     }
 
     setLoading(true);
-    
+
     try {
       // Enviar para Google Sheets via Apps Script Web App
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzYOUR_DEPLOYMENT_ID/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyzqhwuS9Yqzr93Sedu6FCq91Ma0-TA71bdXq7GYlV-MHKLyOsLnVBRtmBIYznV-Nt8cA/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            timestamp: new Date().toISOString(),
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            city: formData.city,
+            objective: formData.objective,
+            income: formData.income || "Não informado",
+            message: formData.message || "Sem mensagem adicional",
+          }),
         },
-        body: JSON.stringify({
-          timestamp: new Date().toISOString(),
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          city: formData.city,
-          objective: formData.objective,
-          income: formData.income || 'Não informado',
-          message: formData.message || 'Sem mensagem adicional',
-        }),
-      });
+      );
 
       setLoading(false);
       toast({
         title: "Mensagem enviada!",
         description: "Entraremos em contato em até 24 horas úteis.",
       });
-      
+
       setFormData({
         name: "",
         email: "",
@@ -106,9 +109,7 @@ const Contato = () => {
             {/* Informações de Contato */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-cinzel font-semibold text-2xl text-foreground mb-6">
-                  Fale Conosco
-                </h2>
+                <h2 className="font-cinzel font-semibold text-2xl text-foreground mb-6">Fale Conosco</h2>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
@@ -121,7 +122,7 @@ const Contato = () => {
                       </a>
                       <br />
                       <a
-                        href={`https://wa.me/5513981419279?text=${encodeURIComponent('Olá! Vim através do site Atlas Patrimonial e gostaria de saber mais sobre a consultoria de investimentos imobiliários. Poderia me fornecer mais informações?')}`}
+                        href={`https://wa.me/5513981419279?text=${encodeURIComponent("Olá! Vim através do site Atlas Patrimonial e gostaria de saber mais sobre a consultoria de investimentos imobiliários. Poderia me fornecer mais informações?")}`}
                         className="text-sm text-gold hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
