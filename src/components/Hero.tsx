@@ -47,7 +47,7 @@ export const Hero = () => {
               </Link>
             </Button>
             <Button variant="outline-light" size="xl" asChild>
-              <Link to="/#metodologia">
+              <Link to="/contato">
                 <Play className="mr-2" size={20} />
                 Conhecer Metodologia 20/80
               </Link>

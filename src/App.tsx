@@ -22,6 +22,12 @@ import ErrosComunsInvestimento from "./pages/blog/ErrosComunsInvestimento";
 import LocalizacaoOuPreco from "./pages/blog/LocalizacaoOuPreco";
 import GestaoImoveisTerceirizar from "./pages/blog/GestaoImoveisTerceirizar";
 import ConsorcioImovelGuia from "./pages/blog/ConsorcioImovelGuia";
+import ApartamentoJardinsSP from "./pages/cases/ApartamentoJardinsSP";
+import StudioPinheirosSP from "./pages/cases/StudioPinheirosSP";
+import CoberturaMoemaSP from "./pages/cases/CoberturaMoemaSP";
+import SalaComercialFariaLima from "./pages/cases/SalaComercialFariaLima";
+import ApartamentoLeblonRJ from "./pages/cases/ApartamentoLeblonRJ";
+import ApartamentoAsaSulDF from "./pages/cases/ApartamentoAsaSulDF";
 
 
 const queryClient = new QueryClient();
@@ -51,6 +57,12 @@ const App = () => (
           <Route path="/post/localizacao-ou-preco" element={<LocalizacaoOuPreco />} />
           <Route path="/post/gestao-imoveis-terceirizar" element={<GestaoImoveisTerceirizar />} />
           <Route path="/post/consorcio-imovel-guia" element={<ConsorcioImovelGuia />} />
+          <Route path="/case/apartamento-jardins-sp" element={<ApartamentoJardinsSP />} />
+          <Route path="/case/studio-pinheiros-sp" element={<StudioPinheirosSP />} />
+          <Route path="/case/cobertura-moema-sp" element={<CoberturaMoemaSP />} />
+          <Route path="/case/sala-comercial-faria-lima" element={<SalaComercialFariaLima />} />
+          <Route path="/case/apartamento-leblon-rj" element={<ApartamentoLeblonRJ />} />
+          <Route path="/case/apartamento-asa-sul-df" element={<ApartamentoAsaSulDF />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

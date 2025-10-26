@@ -25,7 +25,7 @@ export const CTASection = () => {
               </Link>
             </Button>
             <Button variant="outline-light" size="xl" asChild>
-              <Link to="/simulador">
+              <Link to="/contato">
                 <Calculator className="mr-2" size={20} />
                 Fazer Simulação
               </Link>
