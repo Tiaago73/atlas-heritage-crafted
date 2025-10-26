@@ -16,6 +16,12 @@ import AreaCliente from "./pages/AreaCliente";
 import Privacidade from "./pages/Privacidade";
 import Termos from "./pages/Termos";
 import NotFound from "./pages/NotFound";
+import ComoComecarInvestirImoveis from "./pages/blog/ComoComecarInvestirImoveis";
+import Metodologia2080Explicada from "./pages/blog/Metodologia2080Explicada";
+import ErrosComunsInvestimento from "./pages/blog/ErrosComunsInvestimento";
+import LocalizacaoOuPreco from "./pages/blog/LocalizacaoOuPreco";
+import GestaoImoveisTerceirizar from "./pages/blog/GestaoImoveisTerceirizar";
+import ConsorcioImovelGuia from "./pages/blog/ConsorcioImovelGuia";
 
 
 const queryClient = new QueryClient();
@@ -39,6 +45,12 @@ const App = () => (
           <Route path="/area-cliente" element={<AreaCliente />} />
           <Route path="/privacidade" element={<Privacidade />} />
           <Route path="/termos" element={<Termos />} />
+          <Route path="/post/como-comecar-investir-imoveis" element={<ComoComecarInvestirImoveis />} />
+          <Route path="/post/metodologia-20-80-explicada" element={<Metodologia2080Explicada />} />
+          <Route path="/post/erros-comuns-investimento" element={<ErrosComunsInvestimento />} />
+          <Route path="/post/localizacao-ou-preco" element={<LocalizacaoOuPreco />} />
+          <Route path="/post/gestao-imoveis-terceirizar" element={<GestaoImoveisTerceirizar />} />
+          <Route path="/post/consorcio-imovel-guia" element={<ConsorcioImovelGuia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
