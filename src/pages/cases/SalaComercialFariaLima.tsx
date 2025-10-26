@@ -17,10 +17,10 @@ const SalaComercialFariaLima = () => {
         propertyValue: "R$ 980.000",
         downPayment: "R$ 196.000",
         financed: "R$ 784.000",
-        monthlyPayment: "R$ 5.600",
-        monthlyRent: "R$ 6.200",
-        netResult: "+R$ 600",
-        yield: "6,4% a.a.",
+        monthlyPayment: "R$ 4.500",
+        monthlyRent: "R$ 6.800",
+        netResult: "+R$ 2.300",
+        yield: "10,2% a.a.",
       }}
       analysis={{
         strengths: [

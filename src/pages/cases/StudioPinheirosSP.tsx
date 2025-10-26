@@ -18,10 +18,10 @@ const StudioPinheirosSP = () => {
         propertyValue: "R$ 520.000",
         downPayment: "R$ 104.000",
         financed: "R$ 416.000",
-        monthlyPayment: "R$ 2.900",
-        monthlyRent: "R$ 3.100",
-        netResult: "+R$ 200",
-        yield: "6,0% a.a.",
+        monthlyPayment: "R$ 2.400",
+        monthlyRent: "R$ 3.500",
+        netResult: "+R$ 1.100",
+        yield: "10,4% a.a.",
       }}
       analysis={{
         strengths: [

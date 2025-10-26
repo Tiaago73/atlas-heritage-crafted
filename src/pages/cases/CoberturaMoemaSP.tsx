@@ -18,10 +18,10 @@ const CoberturaMoemaSP = () => {
         propertyValue: "R$ 1.200.000",
         downPayment: "R$ 240.000",
         financed: "R$ 960.000",
-        monthlyPayment: "R$ 5.400",
-        monthlyRent: "R$ 5.800",
-        netResult: "+R$ 400",
-        yield: "5,8% a.a.",
+        monthlyPayment: "R$ 4.800",
+        monthlyRent: "R$ 7.200",
+        netResult: "+R$ 2.400",
+        yield: "10,5% a.a.",
       }}
       analysis={{
         strengths: [

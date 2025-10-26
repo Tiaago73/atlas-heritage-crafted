@@ -18,10 +18,10 @@ const ApartamentoJardinsSP = () => {
         propertyValue: "R$ 850.000",
         downPayment: "R$ 170.000",
         financed: "R$ 680.000",
-        monthlyPayment: "R$ 3.800",
-        monthlyRent: "R$ 4.200",
-        netResult: "+R$ 400",
-        yield: "5,9% a.a.",
+        monthlyPayment: "R$ 3.200",
+        monthlyRent: "R$ 4.800",
+        netResult: "+R$ 1.600",
+        yield: "10,8% a.a.",
       }}
       analysis={{
         strengths: [

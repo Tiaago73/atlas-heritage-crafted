@@ -139,7 +139,7 @@ export const CaseStudy = ({
                   <div className="text-3xl font-bold text-foreground">{financials.downPayment}</div>
                 </div>
                 <div className="p-6 bg-card rounded-xl border border-border">
-                  <div className="text-sm text-muted-foreground mb-1">Financiado</div>
+                  <div className="text-sm text-muted-foreground mb-1">Crédito Liberado</div>
                   <div className="text-3xl font-bold text-foreground">{financials.financed}</div>
                 </div>
                 <div className="p-6 bg-card rounded-xl border border-border">
@@ -147,9 +147,9 @@ export const CaseStudy = ({
                   <div className="text-sm text-muted-foreground mb-1">Parcela Mensal</div>
                   <div className="text-3xl font-bold text-foreground">{financials.monthlyPayment}</div>
                 </div>
-                <div className="p-6 bg-gradient-green rounded-xl border border-green-500/20">
-                  <TrendingUp className="text-green-300 mb-3" size={28} />
-                  <div className="text-sm text-green-200 mb-1">Aluguel Estimado</div>
+                <div className="p-6 bg-green-600 rounded-xl border border-green-500/20">
+                  <TrendingUp className="text-white mb-3" size={28} />
+                  <div className="text-sm text-green-50 mb-1">Aluguel Estimado</div>
                   <div className="text-3xl font-bold text-white">{financials.monthlyRent}</div>
                 </div>
                 <div className="p-6 bg-gradient-gold rounded-xl border border-gold/20">

@@ -18,10 +18,10 @@ const ApartamentoAsaSulDF = () => {
         propertyValue: "R$ 720.000",
         downPayment: "R$ 144.000",
         financed: "R$ 576.000",
-        monthlyPayment: "R$ 3.500",
-        monthlyRent: "R$ 3.800",
-        netResult: "+R$ 300",
-        yield: "6,3% a.a.",
+        monthlyPayment: "R$ 2.900",
+        monthlyRent: "R$ 4.500",
+        netResult: "+R$ 1.600",
+        yield: "10,3% a.a.",
       }}
       analysis={{
         strengths: [

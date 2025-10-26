@@ -18,10 +18,10 @@ const ApartamentoLeblonRJ = () => {
         propertyValue: "R$ 1.500.000",
         downPayment: "R$ 300.000",
         financed: "R$ 1.200.000",
-        monthlyPayment: "R$ 7.100",
-        monthlyRent: "R$ 7.500",
-        netResult: "+R$ 400",
-        yield: "6,0% a.a.",
+        monthlyPayment: "R$ 6.200",
+        monthlyRent: "R$ 9.000",
+        netResult: "+R$ 2.800",
+        yield: "10,6% a.a.",
       }}
       analysis={{
         strengths: [
