@@ -28,7 +28,7 @@ export const Header = () => {
               alt="Atlas Patrimonial" 
               className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
             />
-            <span className="font-cinzel font-bold text-xl text-white hidden sm:block">
+            <span className="font-cinzel font-bold text-base sm:text-xl text-white">
               Atlas Patrimonial
             </span>
           </Link>
