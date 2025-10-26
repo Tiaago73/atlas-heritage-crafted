@@ -20,6 +20,9 @@ import {
   Handshake,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import apartamentoJardinsImg from "@/assets/cases/apartamento-jardins-sp.jpg";
+import studioPinheirosImg from "@/assets/cases/studio-pinheiros-sp.jpg";
+import coberturaMoemaImg from "@/assets/cases/cobertura-moema-sp.jpg";
 
 const Index = () => {
   // Mock data
@@ -32,7 +35,7 @@ const Index = () => {
       monthlyPayment: "R$ 3.800",
       netResult: "+R$ 400",
       tags: ["2 quartos", "Alta valorização"],
-      image: "/src/assets/cases/apartamento-jardins-sp.jpg",
+      image: apartamentoJardinsImg,
     },
     {
       slug: "studio-pinheiros-sp",
@@ -42,7 +45,7 @@ const Index = () => {
       monthlyPayment: "R$ 2.900",
       netResult: "+R$ 200",
       tags: ["Studio", "Pronto para morar"],
-      image: "/src/assets/cases/studio-pinheiros-sp.jpg",
+      image: studioPinheirosImg,
     },
     {
       slug: "cobertura-moema-sp",
@@ -52,7 +55,7 @@ const Index = () => {
       monthlyPayment: "R$ 5.400",
       netResult: "+R$ 400",
       tags: ["3 quartos", "Cobertura"],
-      image: "/src/assets/cases/cobertura-moema-sp.jpg",
+      image: coberturaMoemaImg,
     },
   ];
 
@@ -362,27 +365,6 @@ const Index = () => {
               <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Na Mídia */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <SectionHeading
-              badge="Imprensa"
-              title="Atlas na Mídia"
-              subtitle="Acompanhe nossa presença nos principais veículos de economia e investimentos."
-              centered
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {mediaItems.map((item, index) => (
-              <MediaCard key={index} {...item} />
-            ))}
-          </div>
-
         </div>
       </section>
 

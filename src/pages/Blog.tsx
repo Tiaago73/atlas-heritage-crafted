@@ -80,7 +80,7 @@ const Blog = () => {
       image: metodologia2080Img,
     },
     {
-      slug: "erros-comuns-investimento-imobiliario",
+      slug: "erros-comuns-investimento",
       title: "7 Erros que Todo Investidor Iniciante Comete",
       excerpt:
         "Conheça os principais erros ao investir em imóveis e como evitá-los para maximizar seus retornos e minimizar riscos.",
@@ -110,7 +110,7 @@ const Blog = () => {
       image: gestaoImg,
     },
     {
-      slug: "consorcio-imovel-guia-completo",
+      slug: "consorcio-imovel-guia",
       title: "Consórcio de Imóvel: Guia Definitivo",
       excerpt:
         "Do zero à contemplação segura: tudo o que você precisa saber sobre consórcio imobiliário e como usar com inteligência.",

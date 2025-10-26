@@ -4,6 +4,12 @@ import { Footer } from "@/components/Footer";
 import { CaseCard } from "@/components/CaseCard";
 import { Button } from "@/components/ui/button";
 import { Filter } from "lucide-react";
+import apartamentoJardinsImg from "@/assets/cases/apartamento-jardins-sp.jpg";
+import studioPinheirosImg from "@/assets/cases/studio-pinheiros-sp.jpg";
+import coberturaMoemaImg from "@/assets/cases/cobertura-moema-sp.jpg";
+import salaComercialImg from "@/assets/cases/sala-comercial-faria-lima-sp.jpg";
+import apartamentoLeblonImg from "@/assets/cases/apartamento-leblon-rj.jpg";
+import apartamentoAsaSulImg from "@/assets/cases/apartamento-asa-sul-df.jpg";
 
 const Cases = () => {
   const [selectedCity, setSelectedCity] = useState("todas");
@@ -20,7 +26,7 @@ const Cases = () => {
       tags: ["2 quartos", "Alta valorização"],
       city: "sao-paulo",
       type: "residencial",
-      image: "/src/assets/cases/apartamento-jardins-sp.jpg",
+      image: apartamentoJardinsImg,
     },
     {
       slug: "studio-pinheiros-sp",
@@ -32,7 +38,7 @@ const Cases = () => {
       tags: ["Studio", "Pronto para morar"],
       city: "sao-paulo",
       type: "residencial",
-      image: "/src/assets/cases/studio-pinheiros-sp.jpg",
+      image: studioPinheirosImg,
     },
     {
       slug: "cobertura-moema-sp",
@@ -44,7 +50,7 @@ const Cases = () => {
       tags: ["3 quartos", "Cobertura"],
       city: "sao-paulo",
       type: "residencial",
-      image: "/src/assets/cases/cobertura-moema-sp.jpg",
+      image: coberturaMoemaImg,
     },
     {
       slug: "sala-comercial-faria-lima",
@@ -56,7 +62,7 @@ const Cases = () => {
       tags: ["Comercial", "Laje corporativa"],
       city: "sao-paulo",
       type: "comercial",
-      image: "/src/assets/cases/sala-comercial-faria-lima-sp.jpg",
+      image: salaComercialImg,
     },
     {
       slug: "apartamento-leblon-rj",
@@ -68,7 +74,7 @@ const Cases = () => {
       tags: ["3 quartos", "Vista mar"],
       city: "rio-de-janeiro",
       type: "residencial",
-      image: "/src/assets/cases/apartamento-leblon-rj.jpg",
+      image: apartamentoLeblonImg,
     },
     {
       slug: "apartamento-asa-sul-df",
@@ -80,7 +86,7 @@ const Cases = () => {
       tags: ["2 quartos", "Localização premium"],
       city: "brasilia",
       type: "residencial",
-      image: "/src/assets/cases/apartamento-asa-sul-df.jpg",
+      image: apartamentoAsaSulImg,
     },
   ];
 
