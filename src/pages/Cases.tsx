@@ -20,6 +20,7 @@ const Cases = () => {
       tags: ["2 quartos", "Alta valorização"],
       city: "sao-paulo",
       type: "residencial",
+      image: "/src/assets/cases/apartamento-jardins-sp.jpg",
     },
     {
       slug: "studio-pinheiros-sp",

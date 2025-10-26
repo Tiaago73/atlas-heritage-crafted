@@ -121,7 +121,7 @@ const Contato = () => {
                       </a>
                       <br />
                       <a
-                        href="https://wa.me/5513981419279"
+                        href={`https://wa.me/5513981419279?text=${encodeURIComponent('Olá! Vim através do site Atlas Patrimonial e gostaria de saber mais sobre a consultoria de investimentos imobiliários. Poderia me fornecer mais informações?')}`}
                         className="text-sm text-gold hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"

@@ -103,7 +103,12 @@ export const Footer = () => {
                     +55 13 98141-9279
                   </a>
                   <br />
-                  <a href="https://wa.me/5513981419279" className="hover:text-gold transition-colors">
+                  <a 
+                    href={`https://wa.me/5513981419279?text=${encodeURIComponent('Olá! Vim através do site Atlas Patrimonial e gostaria de saber mais sobre a consultoria de investimentos imobiliários. Poderia me fornecer mais informações?')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gold transition-colors"
+                  >
                     WhatsApp
                   </a>
                 </div>

@@ -32,6 +32,7 @@ const Index = () => {
       monthlyPayment: "R$ 3.800",
       netResult: "+R$ 400",
       tags: ["2 quartos", "Alta valorização"],
+      image: "/src/assets/cases/apartamento-jardins-sp.jpg",
     },
     {
       slug: "studio-pinheiros-sp",
@@ -41,6 +42,7 @@ const Index = () => {
       monthlyPayment: "R$ 2.900",
       netResult: "+R$ 200",
       tags: ["Studio", "Pronto para morar"],
+      image: "/src/assets/cases/studio-pinheiros-sp.jpg",
     },
     {
       slug: "cobertura-moema-sp",
@@ -50,6 +52,7 @@ const Index = () => {
       monthlyPayment: "R$ 5.400",
       netResult: "+R$ 400",
       tags: ["3 quartos", "Cobertura"],
+      image: "/src/assets/cases/cobertura-moema-sp.jpg",
     },
   ];
 
