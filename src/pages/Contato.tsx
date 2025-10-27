@@ -39,7 +39,7 @@ const Contato = () => {
     try {
       // Enviar para Google Sheets via Apps Script Web App
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzooqT6e9rNX9QDsihtYTKGoPCZteZAbsxk4ootFbfB/dev",
+        "https://script.google.com/macros/s/AKfycbzooqT6e9rNX9QDsihtYTKGoPCZteZAbsxk4ootFbfB/exec",
         {
           method: "POST",
           mode: "no-cors",
