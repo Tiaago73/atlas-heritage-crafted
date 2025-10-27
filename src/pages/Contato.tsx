@@ -154,11 +154,11 @@ const Contato = () => {
                     <div>
                       <div className="font-medium text-foreground mb-1">Escritório</div>
                       <p className="text-muted-foreground">
-                        Av. Paulista, 1000
+                        Av. Tambore, 267 - Tamboré
                         <br />
-                        São Paulo, SP - Brasil
+                        Barueri - SP, Brasil
                         <br />
-                        CEP 01310-100
+                        CEP 06460-000
                       </p>
                     </div>
                   </div>
